@@ -1,7 +1,7 @@
 const Panel = () => {
     return(
-        <div>
-            Panel
+        <div className="panel">   
+            
         </div>
     )
 }
