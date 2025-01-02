@@ -1,0 +1,49 @@
+.images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+.images .upload-prev {
+  cursor: pointer;
+  background-color: #d9d9d9;
+  border-radius: 12px;
+  width: 125px;
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.images .upload-prev:hover .upload-label {
+  opacity: 1;
+}
+.images .upload-prev .upload-label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.images .upload-prev label span {
+  font-size: 40px;
+  color: #8c8c8c;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.images .upload-prev label span:hover {
+  color: #4caf50;
+}
+.images .upload-prev img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/*# sourceMappingURL=images.css.map */

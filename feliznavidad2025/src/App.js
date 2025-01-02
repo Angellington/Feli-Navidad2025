@@ -1,8 +1,10 @@
 import './App.css';
-import Imagesput from './components/images';
-import TextField from '@mui/material/TextField';
+import './styles/main.css'
+
 
 import Form from './components/Form'
+
+
 
 function App() {
   return (

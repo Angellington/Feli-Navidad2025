@@ -1,6 +1,8 @@
 import Imagesput from './images';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import '../styles/form.css'
+
 
 // Functions
 
@@ -16,10 +18,15 @@ const Form = () => {
     return (
         <form onSubmit={handleSubmit}>
           <h1>Feliz Navidad! Feliz Navidad</h1>
-          <TextField id="outlined-basic" label="Nome" variant="outlined" />
-          <TextField id="outlined-basic" label="Mensagem" variant="outlined" />
+          <div class="fields">
+              <TextField id="outlined-basic" label="Nome" variant="outlined" />
+              <TextField id="outlined-basic" label="Mensagem" variant="outlined" multiline rows={4} />
+          </div>
+          <h1 style={{ textAlign: 'left', margin: 0}}>Estampas</h1>
           <Imagesput/>
-          <Button type='submit' variant="contained">Contained</Button>
+            <div class="btn-submit" style={{ width: '100%' }}>
+                <Button type='submit' variant="contained">Criar Painel</Button>
+            </div>
 
         </form>
     )

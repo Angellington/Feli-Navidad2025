@@ -1,0 +1,62 @@
+html {
+    background-image: url("../assets/background/BackKanade.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+$mobile: 774px;
+$desktop: 774px;
+
+
+
+@media (min-width: $desktop){
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    form {
+        background: rgba(255, 255, 255, 0.774);
+        width: 774px;
+        height: 80vh;
+        border-radius: 8px;
+
+        backdrop-filter: blur(2px);
+        padding: 0px 40px 40px 40px;
+
+        gap: 20px;
+
+        display: flex;
+        flex-direction: column;
+
+        .fields {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+
+        }
+       
+    }
+}
+
+@media (max-width: $mobile){
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    form {
+        background: rgba(255, 255, 255, 0.774);
+        width: 100%;
+        height: 80vh;
+        border-radius: 8px;
+        .fields {
+            display: flex;
+            justify-content: start;
+            flex-direction: column;
+        }
+    }
+}

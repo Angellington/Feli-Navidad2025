@@ -1,0 +1,63 @@
+// Estilo geral para o container
+.images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px; // Espaçamento entre os elementos
+  
+    // Estilo para cada área de upload
+    .upload-prev {
+      cursor: pointer;
+      background-color: #d9d9d9;
+      border-radius: 12px;
+      width: 125px;
+      height: 125px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden; // Para garantir que a imagem não saia do limite
+  
+      // Quando o label for clicado, ele abrirá o seletor de arquivo
+      &:hover {
+        .upload-label {
+          opacity: 1; // Torna o label visível ao passar o mouse
+        }
+      }
+  
+      // Estilo para o label que será invisível
+      .upload-label {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        opacity: 0; // Torna o label invisível
+        transition: opacity 0.3s ease; // Suaviza a transição de visibilidade
+      }
+  
+      // Estilo para o ícone de "+" (se imagem não for selecionada)
+      label span {
+        font-size: 40px;
+        color: #8c8c8c;
+        font-weight: bold;
+        transition: color 0.3s ease;
+  
+        &:hover {
+          color: #4caf50; // Efeito ao passar o mouse
+        }
+      }
+  
+      // Quando a imagem for selecionada, ela será exibida com o estilo correto
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+      
+    }
+  }
+  
