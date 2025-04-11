@@ -1,12 +1,14 @@
 
-import './App.css'
+import './styles/css/root/App.css'
+
+import Form from './components/Form.jsx'
 
 function App() {
   
 
   return (
     <>
-       <h1>Volition Solitude</h1>
+      <Form />
     </>
   )
 }
