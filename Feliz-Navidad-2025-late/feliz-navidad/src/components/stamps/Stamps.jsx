@@ -2,37 +2,33 @@ import Stamp from './stamp/Stamp'
 
 import { useState } from 'react'
 
-const Stamps = () => {
+const Stamps = ( { onChange }) => {
     // Guardando as imagens dos componentes
-    const [image, setImages] = useState({})
+    const [images, setImages] = useState({})
 
     // salvando elas  em um objeto
     const handleStamptData = (id, base64) => {
-        setImages((prev) => ({
-            ...prev,
+        const updatedImages = {
+            ...images,
             [id]: base64
-        }))
-    }
-       
+        }
 
+        // Agora vou colocar esse updatedImages no onChange, para levar para o pai
+        onChange(updatedImages)
+        setImages(updatedImages)
     
 
 
-
-
-
-
-
+    }
     return (
 
-        <div>
-            <h3>Estampas</h3>
+        <div className='stamps-container'>
+            <h3 className='stamp-text'>Estampas</h3>
             <div className="stamps">
                 <Stamp stampId='1' stampData={handleStamptData}/>
                 <Stamp stampId='2' stampData={handleStamptData}/>
-
-                {image["1"] && <img src={image["1"]} alt="Stamp 1" />}
-                {image["2"] && <img src={image["2"]} alt="Stamp 2" />}
+                <Stamp stampId='3' stampData={handleStamptData}/>
+                <Stamp stampId='4' stampData={handleStamptData}/>
             </div>
         </div>
     )

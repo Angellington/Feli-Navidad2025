@@ -9,7 +9,7 @@
     width: 350px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 12px;
-    padding: 1rem 2.5rem 3.5rem 2.5rem;
+    padding: 2rem 3.5rem 4.5rem 3.5rem;
     gap: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -24,12 +24,26 @@
     gap: 1rem;
     width: 100%;
   }
-  .form .stamps {
-    background-color: bisque;
+  .form .stamps-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .form .stamps-container h3 {
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+  .form .stamps-container .stamps {
     display: flex;
     flex-direction: row;
+    gap: 1em;
+    text-align: left;
   }
-  .form .stamps .stamp .btn-image {
+  .form .stamps-container .stamps .stamp .btn-image {
     margin: 0;
     padding: 0;
     background-color: rgba(207, 207, 207, 0.8);
@@ -38,7 +52,7 @@
     color: rgba(68, 68, 68, 0.8);
     font-size: 32px;
   }
-  .form .stamps .stamp img {
+  .form .stamps-container .stamps .stamp img {
     width: 6em;
     height: 6em;
     border-radius: 6px;

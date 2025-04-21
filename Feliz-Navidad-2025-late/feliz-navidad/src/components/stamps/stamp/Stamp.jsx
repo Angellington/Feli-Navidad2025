@@ -26,7 +26,8 @@ const Stamp = ( {stampId, stampData } ) => {
             <input type="file" name="" id={stampId} hidden onChange={handleChange} />
 
             {/* O botão de + só aparece se não houver imagem */}
-            {!stamp ? (<button className='btn-image' type='submit' onClick={() => {
+            {!stamp ? (<button type='button'
+                className='btn-image' onClick={() => {
                 document.getElementById(stampId).click();
                 console.log(stampId)
             }}>+</button>) : null}

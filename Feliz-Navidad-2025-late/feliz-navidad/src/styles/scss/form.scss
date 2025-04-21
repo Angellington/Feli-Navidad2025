@@ -20,7 +20,7 @@ $tk-color: rgba(68, 68, 68, 0.8);
         background-color: $pk-color;
         border-radius: 12px;
 
-        padding: 1rem 2.5rem 3.5rem 2.5rem;
+        padding: 2rem 3.5rem 4.5rem 3.5rem;
         gap: 0.5rem;
 
         display: flex;
@@ -36,34 +36,52 @@ $tk-color: rgba(68, 68, 68, 0.8);
             gap: 1rem;
             width: 100%;
         }
-        .stamps {
-            background-color: bisque;
-            
+        .stamps-container {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
 
-            .stamp {
-                .btn-image {
-                    margin: 0;
-                    padding: 0;
+            h3 {
+                width: 100%;
+                text-align: left;
+                margin: 0;
+                padding: 0;
+            }
 
-                    background-color: $sk-color;
-                    width: 3em;
-                    height: 3em;
-
-                    color: $tk-color;
-
-                    font-size: 32px;
-                }
-                img {
-                    width: 6em;
-                    height: 6em;
-                    border-radius: 6px;
-
-                    cursor: pointer;
+            .stamps {
+                // background-color: bisque;
+                
+                display: flex;
+                flex-direction: row;
+                gap: 1em;
+                text-align: left;
+    
+                .stamp {
+                    .btn-image {
+                        margin: 0;
+                        padding: 0;
+    
+                        background-color: $sk-color;
+                        width: 3em;
+                        height: 3em;
+    
+                        color: $tk-color;
+    
+                        font-size: 32px;
+                    }
+                    img {
+                        width: 6em;
+                        height: 6em;
+                        border-radius: 6px;
+    
+                        cursor: pointer;
+                    }
                 }
             }
         }
+        
 
     }
 }

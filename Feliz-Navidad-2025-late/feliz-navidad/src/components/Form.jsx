@@ -1,9 +1,21 @@
+import { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Stamps from './stamps/Stamps'
-
+import { useNavigate } from "react-router-dom";
+ 
 const Form = () => {
+    const navigate = useNavigate();
+    const [stamps, setStamps] = useState({});
+
+
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        // alert("Enviando")
+
+        navigate("/feliz-navidad", {
+            state: { stamps }
+        });
     }
 
     return (
@@ -15,7 +27,8 @@ const Form = () => {
                 <TextField id="outlined-basic" label="Mensagem" variant="outlined" />
             </div>
 
-            <Stamps />
+            <Stamps onChange={setStamps}/>
+
             <input type="submit" value="Enviar" />
         </form>
     )
