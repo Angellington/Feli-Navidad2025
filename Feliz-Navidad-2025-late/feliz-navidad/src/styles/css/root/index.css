@@ -4,8 +4,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
   background-color:rgb(238, 238, 238);
+
   background-image: url('../../../assets/background/BackKanade.webp');
   
 
@@ -70,5 +70,18 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color:rgb(80, 80, 80);
+    background-color:rgb(88, 88, 88);
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color:rgb(146, 141, 141);
   }
 }
