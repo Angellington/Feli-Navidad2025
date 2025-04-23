@@ -23,7 +23,7 @@ const Stamp = ( {stampId, stampData } ) => {
 
     return (
         <div className="stamp">
-            <input type="file" name="" id={stampId} hidden onChange={handleChange} />
+            <input type="file" name="stamp" id={stampId} hidden onChange={handleChange} />
 
             {/* O botão de + só aparece se não houver imagem */}
             {!stamp ? (<button type='button'

@@ -5,16 +5,22 @@ import { useNavigate } from "react-router-dom";
  
 const Form = () => {
     const navigate = useNavigate();
+
     const [stamps, setStamps] = useState({});
+
+    const [name, setName] = useState("")
+    const [message, setMessage] = useState("")
 
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // alert("Enviando")
-
+        // Fazer verificação Manual
+        const requiredStamps = ['1', '2', '3', '4'];
+        
+        
         navigate("/feliz-navidad", {
-            state: { stamps }
+            state: { stamps, name, message }
         });
     }
 
@@ -23,8 +29,17 @@ const Form = () => {
             <h2>Feliz Navidad 2025</h2>
 
             <div className="Textfields">
-                <TextField id="outlined-basic" label="Nome" variant="outlined" />
-                <TextField id="outlined-basic" label="Mensagem" variant="outlined" />
+                <TextField 
+                required 
+                id="outlined-basic" 
+                label="Mensagem" 
+                name="message" 
+                variant="outlined" 
+                multiline
+                fullWidth
+                rows={2}
+                value={message} 
+                onChange={(e) => setMessage(e.target.value)}/>
             </div>
 
             <Stamps onChange={setStamps}/>

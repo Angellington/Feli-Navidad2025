@@ -24,7 +24,7 @@ import Happy7 from '../assets/felizrandom/happy7.png'
 import Happy8 from '../assets/felizrandom/happy8.png'
 
 
-const FelizNavidad = () => {
+const FelizNavidad = ( ) => {
     // Lista das imagens
     const images_list = [ Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img8 ];
     const happy_list = [ Happy1, Happy2, Happy3, Happy4, Happy5, Happy6, Happy7, Happy8 ];
@@ -32,13 +32,18 @@ const FelizNavidad = () => {
 
     let rand_images = Math.floor(Math.random() * images_list.length);
     let rand_happy = Math.floor(Math.random() * happy_list.length);
+    // Imagens 
 
     const location = useLocation();
+
+
     const navigate = useNavigate();
 
     const { stamps } = location.state || {}; // Desestruturação do state, caso não tenha, será undefined
 
-    console.log(stamps);
+    const { name, message } = location.state || {}; // Desestruturação do state, caso não tenha, será undefined
+
+
 
     const handleClick = () => {
         navigate("/");
@@ -48,24 +53,29 @@ const FelizNavidad = () => {
     <div>
         <article className="container-image" style={{ backgroundImage: `url(${images_list[rand_images]})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
             <img src={happy_list[rand_happy]} alt="Feliz Navidad" className="tittle"/>
+            <div className="title-name">
+                <h2>{name}</h2>
+            </div>
+            <div className="message">
+                <h3>{message}</h3>
+            </div>
+            
+            <img src={stamps[1]} alt="Selo 1" id="img1"/>
+           
+
+            {/* <div className="img2">
+                <img src={img2} alt="Selo 2" className="stamp2"/>
+            </div>
+            <div className="img3">
+                <img src={img3} alt="Selo 3" className="stamp3"/>
+            </div>
+            <div className="img4">
+                <img src={img4} alt="Selo 4" className="stamp4"/>
+            </div> */}
+
         </article>
 
         <button onClick={handleClick}>VOLTAR</button>
-
-
-
-        {/* <h2>Feliz Navidad 2025</h2>
-        <button onClick={handleClick}>VOLTAR</button>
-        <article>
-            <h3>Imagens Recebidas</h3>
-            {stamps && Object.entries(stamps).map(([id, base64]) => (
-                <div key={id}>
-                    <h4>Imagem {id}</h4>
-                    <img src={base64} alt={`Stamp ${id}`} />
-                </div>
-            ))}
-            
-        </article> */}
     </div>
   )
 }
