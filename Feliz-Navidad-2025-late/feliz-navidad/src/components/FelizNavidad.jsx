@@ -61,17 +61,10 @@ const FelizNavidad = ( ) => {
             </div>
             
             <img src={stamps[1]} alt="Selo 1" id="img1"/>
+            <img src={stamps[2]} alt="Selo 1" id="img2"/>
+            <img src={stamps[3]} alt="Selo 1" id="img3"/>
+            <img src={stamps[4]} alt="Selo 1" id="img4"/>
            
-
-            {/* <div className="img2">
-                <img src={img2} alt="Selo 2" className="stamp2"/>
-            </div>
-            <div className="img3">
-                <img src={img3} alt="Selo 3" className="stamp3"/>
-            </div>
-            <div className="img4">
-                <img src={img4} alt="Selo 4" className="stamp4"/>
-            </div> */}
 
         </article>
 

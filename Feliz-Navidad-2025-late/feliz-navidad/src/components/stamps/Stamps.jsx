@@ -12,16 +12,11 @@ const Stamps = ( { onChange }) => {
             ...images,
             [id]: base64
         }
-
         // Agora vou colocar esse updatedImages no onChange, para levar para o pai
         onChange(updatedImages)
         setImages(updatedImages)
-    
-
-
     }
     return (
-
         <div className='stamps-container'>
             <h3 className='stamp-text'>Estampas</h3>
             <div className="stamps">

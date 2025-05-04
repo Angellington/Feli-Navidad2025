@@ -17,9 +17,10 @@
   }
   .container-image .tittle {
     height: fit-content;
-    width: 500px;
+    width: 400px;
     position: absolute;
-    transform: translateY(-190px);
+    transform: translateY(-220px);
+    z-index: 2;
   }
   .container-image .title-name {
     font-size: 2.5rem;
@@ -27,6 +28,46 @@
     text-align: center;
     font-weight: 700;
     text-shadow: 0px 0px 10px #000;
+  }
+  .container-image .message {
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 3px 3px 2px #000;
+    font-size: 24px;
+    z-index: 1;
+  }
+  .container-image #img1 {
+    position: absolute;
+    top: 440px;
+    transform: translateX(125px);
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  .container-image #img2 {
+    position: absolute;
+    top: 170px;
+    transform: translateX(125px);
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  .container-image #img3 {
+    position: absolute;
+    top: 493px;
+    transform: translateX(-127px);
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  .container-image #img4 {
+    position: absolute;
+    top: 223.9px;
+    transform: translateX(-177px);
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
   }
 }
 @media screen and (min-width: 768px) {
@@ -47,6 +88,7 @@
     width: 500px;
     position: absolute;
     transform: translateY(-190px);
+    z-index: 2;
   }
   .container-image .title-name {
     font-size: 2.5rem;
@@ -55,10 +97,42 @@
     font-weight: 700;
     text-shadow: 0px 0px 10px #000;
   }
+  .container-image .message {
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 3px 3px 2px #000;
+    font-size: 24px;
+    z-index: 1;
+  }
   .container-image #img1 {
     position: absolute;
     top: 440px;
-    transform: translateX(-225px);
+    transform: translateX(225px);
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  .container-image #img2 {
+    position: absolute;
+    top: 170px;
+    transform: translateX(225px);
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  .container-image #img3 {
+    position: absolute;
+    top: 493px;
+    transform: translateX(-227px);
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  .container-image #img4 {
+    position: absolute;
+    top: 223.9px;
+    transform: translateX(-377px);
     width: 150px;
     height: 150px;
     object-fit: cover;
